@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-import Slide from "@mui/material/Slide";
-import IconButton from "@mui/material/IconButton";
-import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import CloseIcon from "@mui/icons-material/Close";
+import ExternalLink from "@mui/icons-material/Launch";
+import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import Slide from "@mui/material/Slide";
+import { styled } from "@mui/material/styles";
+import React, { useState } from "react";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -39,10 +40,17 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default ({
   size = "large",
   docLink = "https://positive-intentions.com/docs/basics/getting-started/",
+  defaultOpen = false,
+  onClose,
+  title = "Getting started",
 }) => {
-  const [open, setOpen] = useState(false);
-  const handleClose = () => setOpen(false);
+  const [open, setOpen] = useState(defaultOpen);
+  const handleClose = () => {
+    setOpen(false);
+    onClose && onClose();
+  };
   const handleOpen = () => setOpen(true);
+  const handleOpenLink = () => window.open(docLink, "_blank");
   return (
     <>
       <IconButton
@@ -66,7 +74,7 @@ export default ({
         fullHeight
       >
         <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-          Docs
+          {title ? title : "Docs"}
         </DialogTitle>
         <IconButton
           aria-label="close"
@@ -86,13 +94,15 @@ export default ({
             width="80vw"
             height="100%"
             frameBorder="0"
-            title="Docs"
+            title={title}
           />
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            close
+          <Button onClick={handleOpenLink} variant="secondary">
+            Getting started
+            <ExternalLink style={{ marginLeft: 5 }} />
           </Button>
+          <Button onClick={handleClose}>close</Button>
         </DialogActions>
       </BootstrapDialog>
     </>
