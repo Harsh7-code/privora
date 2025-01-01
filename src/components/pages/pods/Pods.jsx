@@ -1,27 +1,22 @@
-import React, { useState, useEffect, useMemo, useRef, forwardRef } from "react";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import { makeStyles, useTheme } from "@mui/styles";
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import PageContainer from "../../atomic/organism/page-container/PageContainer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import ListComponent from "../../atomic/molecules/list/List";
-import usePeer from "../../p2p/usePeer";
-import Blockchain, { useBlockchain } from "../../blockchain/Blockchain";
-import { compiler as profileCompiler } from "../../blockchain/chains/profileChain";
-import { compiler as podCompiler } from "../../blockchain/chains/podChain";
-import { useNotification } from "../../notifications/notificationManager";
-import { useTranslation } from "react-i18next";
-import { ColorModeContext } from "../../../App.tsx";
 import { t } from "i18next";
-import { logToNLevelAnalytics } from "../../utils/analytics";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { CoachMark } from "react-coach-mark";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { ColorModeContext } from "../../../App.tsx";
 import DocLink from "../../atomic/atom/docLink/DocLink";
+import ListComponent from "../../atomic/molecules/list/List";
+import PageContainer from "../../atomic/organism/page-container/PageContainer";
+import Blockchain, { useBlockchain } from "../../blockchain/Blockchain";
+import { compiler as podCompiler } from "../../blockchain/chains/podChain";
+import { compiler as profileCompiler } from "../../blockchain/chains/profileChain";
+import { useNotification } from "../../notifications/notificationManager";
+import usePeer from "../../p2p/usePeer";
+import { logToNLevelAnalytics } from "../../utils/analytics";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,7 +49,7 @@ function GroupsListPage() {
   const sendNotification = useNotification();
 
   const userProfileBlockchain = useSelector(
-    (state) => state.userProfile.blockchain,
+    (state) => state.userProfile.blockchain
   );
   const { compiledBlockchain: userProfile } = useBlockchain({
     compiler: profileCompiler,
@@ -86,8 +81,8 @@ function GroupsListPage() {
                 (contact) =>
                   contact.connectionId ===
                   pod.users?.filter(
-                    (memberId) => memberId !== storedPersonalId,
-                  )[0],
+                    (memberId) => memberId !== storedPersonalId
+                  )[0]
               )?.displayName ?? "Please wait"),
         avatarUrl:
           pod.users?.length > 2
@@ -96,8 +91,8 @@ function GroupsListPage() {
                 (contact) =>
                   contact.connectionId ===
                   pod.users?.filter(
-                    (memberId) => memberId !== storedPersonalId,
-                  )[0],
+                    (memberId) => memberId !== storedPersonalId
+                  )[0]
               )?.avatar ?? "-"),
         isOnline: pod.users
           .filter((c) => c !== storedPersonalId)
@@ -316,12 +311,12 @@ export default function Pods() {
         chain: storedBlockchain.chain.filter((b) => !!b) || [],
         storage: storedBlockchain.storage || {},
       }),
-    [storedBlockchain.chain, storedBlockchain.storage],
+    [storedBlockchain.chain, storedBlockchain.storage]
   );
 
   const compiledProfile = useMemo(
     () => profileBlockchain.compile(),
-    [profileBlockchain],
+    [profileBlockchain]
   );
   // const storedInAppNotification = compiledProfile.settings.inAppNotification;
   const storedBrowserNotification =
@@ -413,6 +408,7 @@ export default function Pods() {
           <DocLink
             key="docs"
             docLink="https://positive-intentions.com/docs/basics/pods"
+            title="Pods"
           />,
         ],
         menuProps: {

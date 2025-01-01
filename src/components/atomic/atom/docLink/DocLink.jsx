@@ -99,7 +99,7 @@ export default ({
         </DialogContent>
         <DialogActions>
           <Button onClick={handleOpenLink} variant="secondary">
-            Getting started
+            {title}
             <ExternalLink style={{ marginLeft: 5 }} />
           </Button>
           <Button onClick={handleClose}>close</Button>

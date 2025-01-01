@@ -90,47 +90,25 @@
 //     )
 // }
 
-import React, { useEffect, useState, useRef, useMemo } from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { makeStyles, useTheme } from "@mui/styles";
-import AppBar from "@mui/material/AppBar";
-import Typography from "@mui/material/Typography";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ChevronRight from "@mui/icons-material/ChevronRight";
-import Fab from "@mui/material/Fab";
-import AddIcon from "@mui/icons-material/Add";
+import Typography from "@mui/material/Typography";
+import { makeStyles, useTheme } from "@mui/styles";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { CoachMark } from "react-coach-mark";
+import { useTranslation } from "react-i18next";
+import QRReader from "react-qr-scanner";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import hipaintImage from "../../../../public/logo512.png";
+import { ColorModeContext } from "../../../App.tsx";
+import { logToNLevelAnalytics } from "../../../components/utils/analytics";
+import DocLink from "../../atomic/atom/docLink/DocLink";
+import ConnectToPeer from "../../atomic/molecules/connect-to-peer/ConnectToPeer";
 import ListComponent from "../../atomic/molecules/list/List";
 import PageContainer from "../../atomic/organism/page-container/PageContainer";
-import usePeer from "../../p2p/usePeer";
-import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
-import SaveIcon from "@mui/icons-material/Save";
-import PrintIcon from "@mui/icons-material/Print";
-import ShareIcon from "@mui/icons-material/Share";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import QrCode2Icon from "@mui/icons-material/QrCode2";
-import LinkIcon from "@mui/icons-material/Link";
-import QRReader from "react-qr-scanner";
 import { useNotification } from "../../notifications/notificationManager";
-import Blockchain, { useBlockchain } from "../../blockchain/Blockchain";
-import {
-  compiler as profileCompiler,
-  blockBuilders,
-} from "../../blockchain/chains/profileChain";
-import ConnectToPeer from "../../atomic/molecules/connect-to-peer/ConnectToPeer";
-import { red } from "@mui/material/colors";
-import { ColorModeContext } from "../../../App.tsx";
-import { useTranslation } from "react-i18next";
-import { logToNLevelAnalytics } from "../../../components/utils/analytics";
-import { CoachMark } from "react-coach-mark";
-import DocLink from "../../atomic/atom/docLink/DocLink";
-import hipaintImage from "../../../../public/logo512.png";
+import usePeer from "../../p2p/usePeer";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -314,6 +292,8 @@ export default function ContactsListPage({ headerOverride }) {
           <DocLink
             key="docLink"
             docLink="https://positive-intentions.com/docs/basics/peers"
+            title="Connect to a peer"
+            defaultOpen={contactsList.length === 0}
           />,
         ],
         menuProps: {

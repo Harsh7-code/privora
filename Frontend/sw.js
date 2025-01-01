@@ -107,7 +107,7 @@ var __wpo = {
   "externals": [],
   "hashesMap": {
     "1f08165094094ec5c2b64ea075e42de08738c3eb": "./main.js",
-    "abf466e0191d9491c9612b9a597737162a6271c1": "./896.main.js",
+    "02248a985273a9d14d9df820f7853e06ee2e8a3b": "./896.main.js",
     "2a31dcf512807e71f46da7876bb00cd6b25e1761": "./9ea0e16afc9516dcea53.jpg",
     "e2f1704e69ee98dedf108b65ceaf5457344489c3": "./a3fcdef2d1473cb16962.jpg",
     "dc5079f3dbe34b53cc786e3e95b05dac8f43827b": "./c3ccde5b00440d752330.jpg",
@@ -208,7 +208,7 @@ var __wpo = {
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "12/31/2024, 9:56:20 PM",
+  "version": "1/1/2025, 6:55:11 PM",
   "name": "webpack-offline",
   "pluginVersion": "5.1.1",
   "relativePaths": true

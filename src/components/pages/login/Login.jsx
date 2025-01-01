@@ -554,6 +554,13 @@ export default function LoginPage() {
     }
   }, [contactId, storedUsername, contacts]);
 
+  useEffect(() => {
+    if (!!storedUsername) {
+      navigate(`/pods`);
+      navigate(`/contacts`);
+    }
+  }, [storedUsername]);
+
   const { t, i18n } = useTranslation();
   const pageTitle = t("loginPage.pageTitle");
 
