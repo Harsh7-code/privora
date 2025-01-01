@@ -130,75 +130,66 @@
 //   // return ("hello world")
 // }
 
-import React, { useState, useRef, useMemo, useEffect, Component } from "react";
-import Avatar from "@mui/material/Avatar";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import AppBar from "@mui/material/AppBar";
-import Typography from "@mui/material/Typography";
-import { makeStyles, useTheme } from "@mui/styles";
-import { useSelector, useDispatch, useStore } from "react-redux";
-import {
-  updateUsername,
-  updateAgreedToTerms,
-  setUserProfile,
-  updateAvatar,
-  setInAppNotification,
-  setBrowserNotification,
-  addToBlockchain,
-} from "../../redux/slices/userProfileSlice";
-import { setPods } from "../../redux/slices/podsSlice";
-import { setContacts } from "../../redux/slices/contactsSlice";
-import { setEncryption } from "../../redux/slices/encryptionSlice";
-import { useNavigate, useParams } from "react-router-dom";
-import PageContainer from "../../atomic/organism/page-container/PageContainer";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import RefreshIcon from "@mui/icons-material/Refresh";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
-import AllTermsAndConditions from "../../atomic/atom/termsAndConditions";
-import InputAdornment from "@mui/material/InputAdornment";
-import IconButton from "@mui/material/IconButton";
-import Box from "@mui/material/Box";
-import RefreshIcon from "@mui/icons-material/Refresh";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import {
-  // useSnackbar,
-  useNotification,
-} from "../../notifications/notificationManager";
-import Switch from "@mui/material/Switch";
-import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import Blockchain, { useBlockchain } from "../../blockchain/Blockchain";
-import {
-  compiler as profileCompiler,
-  blockBuilders,
-} from "../../blockchain/chains/profileChain";
-import SignatureCanvas from "../../atomic/atom/signatureCanvas/SignatureCanvas";
+import FormGroup from "@mui/material/FormGroup";
+import IconButton from "@mui/material/IconButton";
+import InputAdornment from "@mui/material/InputAdornment";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import Switch from "@mui/material/Switch";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import { makeStyles, useTheme } from "@mui/styles";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useDispatch, useSelector, useStore } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
 import { ColorModeContext } from "../../../App.tsx";
+import SignatureCanvas from "../../atomic/atom/signatureCanvas/SignatureCanvas";
+import AllTermsAndConditions from "../../atomic/atom/termsAndConditions";
+import PageContainer from "../../atomic/organism/page-container/PageContainer";
+import { useBlockchain } from "../../blockchain/Blockchain";
+import {
+  blockBuilders,
+  compiler as profileCompiler,
+} from "../../blockchain/chains/profileChain";
+import { setContacts } from "../../redux/slices/contactsSlice";
+import { setEncryption } from "../../redux/slices/encryptionSlice";
+import { setPods } from "../../redux/slices/podsSlice";
+import {
+  addToBlockchain,
+  setBrowserNotification,
+  setInAppNotification,
+  setUserProfile,
+  updateAgreedToTerms,
+  updateAvatar,
+  updateUsername,
+} from "../../redux/slices/userProfileSlice";
 // import {Adsense} from '@ctrl/react-adsense';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import JSZip from "jszip";
-import { useTranslation } from "react-i18next";
 import { useCryptography } from "cryptography/Cryptography";
+import JSZip from "jszip";
 import { CoachMark } from "react-coach-mark";
-import ConnectToPeer from "../../atomic/molecules/connect-to-peer/ConnectToPeer";
-import hipaintImage from "../../../../public/logo512.png";
-import decentralisedImage from "../../../../public/home-icons/decentralized.png";
+import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import agnosticImage from "../../../../public/home-icons/agnostic.png";
 import dataImportExportImage from "../../../../public/home-icons/data-export-import.png";
+import decentralisedImage from "../../../../public/home-icons/decentralized.png";
 import noRegistration from "../../../../public/home-icons/no-registration.png";
-import pushNotifications from "../../../../public/home-icons/push-notifications.png";
-import videoCalls from "../../../../public/home-icons/video-calls.png";
+import hipaintImage from "../../../../public/logo512.png";
 import DocLink from "../../atomic/atom/docLink/DocLink";
-import TinderCard from "react-tinder-card";
+import ConnectToPeer from "../../atomic/molecules/connect-to-peer/ConnectToPeer";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -396,6 +387,7 @@ export default function LoginPage() {
     compiledProfile.settings?.browserNotification;
   const storedExperimentalFeatures =
     compiledProfile.settings?.experimentalFeatures;
+  const [defaultOpen, setDefaultOpen] = useState(true);
 
   const [peerjsServer, setPeerjsServer] = useState("");
   const handlePeerjsServerChange = (event) => {
@@ -561,6 +553,13 @@ export default function LoginPage() {
       navigate(`/pods`);
     }
   }, [contactId, storedUsername, contacts]);
+
+  useEffect(() => {
+    if (!!storedUsername) {
+      navigate(`/pods`);
+      navigate(`/contacts`);
+    }
+  }, [storedUsername]);
 
   const { t, i18n } = useTranslation();
   const pageTitle = t("loginPage.pageTitle");
@@ -915,7 +914,13 @@ export default function LoginPage() {
           //   icon: 'help',
           //   onClick: () => setActivateNumber(0)
           // }
-          <DocLink key="doc-link" />,
+          <DocLink
+            docLink={
+              "https://positive-intentions.com/docs/basics/getting-started"
+            }
+            onClose={() => setDefaultOpen(false)}
+            defaultOpen={defaultOpen}
+          />,
         ],
         menuProps: {
           icon: "more",
