@@ -308,7 +308,7 @@ i18n
           },
         },
       },
-      // spanish
+      // spanish starts here
       es: {
         translation: {
           common: {
@@ -431,6 +431,7 @@ i18n
           },
         },
       },
+      // spanish ends here
       // mandarin
       zh: {
         translation: {
