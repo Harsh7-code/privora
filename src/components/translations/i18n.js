@@ -308,11 +308,11 @@ i18n
           },
         },
       },
-      // spanish
+      // spanish starts here
       es: {
         translation: {
           common: {
-            inAppNotification: "Notificaciones de la aplicación",
+            inAppNotification: "Notificaciones en la aplicación",
             browserNotification: "Notificaciones del navegador",
             more: "Más",
           },
@@ -361,7 +361,7 @@ i18n
             inAppNotification: "Notificaciones de la aplicación",
             browserNotification: "Notificaciones del navegador",
             termsAgreement:
-              "Acepto estos Términos y condiciones, y reconozco que esta aplicación se encuentra actualmente en una fase de prueba. Entiendo que las características y funcional",
+              "Acepto estos Términos y condiciones, y reconozco que esta aplicación se encuentra actualmente en una fase de prueba. Entiendo que las características y funcionalidades están sujetas a cambios.",
             connect: "Conectar",
             loadProfileFromFile: "Cargar perfil desde archivo",
             setAvatar: "Establecer avatar",
@@ -431,6 +431,7 @@ i18n
           },
         },
       },
+      // spanish ends here
       // mandarin
       zh: {
         translation: {
