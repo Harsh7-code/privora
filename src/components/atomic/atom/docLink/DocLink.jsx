@@ -14,8 +14,8 @@ import React, { useState } from "react";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
-    minHeight: "70vh",
-    maxHeight: "70vh",
+    // minHeight: "70vh",
+    // maxHeight: "70vh",
     display: "flex",
     flexDirection: "column",
   },
@@ -45,6 +45,7 @@ export default ({
   title = "Getting started",
 }) => {
   const [open, setOpen] = useState(defaultOpen);
+  const [showIframe, setShowIframe] = useState(false);
   const handleClose = () => {
     setOpen(false);
     onClose && onClose();
@@ -89,19 +90,53 @@ export default ({
           <CloseIcon />
         </IconButton>
         <DialogContent dividers>
-          <iframe
-            src={docLink}
-            width="80vw"
-            height="100%"
-            frameBorder="0"
-            title={title}
-          />
+          {showIframe && (
+            <iframe
+              src={docLink}
+              width="80vw"
+              height="100%"
+              frameBorder="0"
+              title={title}
+              style={{
+                minHeight: "70vh",
+                maxHeight: "70vh",
+              }}
+            />
+          )}
+          {!showIframe && (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Button
+                onClick={() => setShowIframe(true)}
+                variant="contained"
+                color="primary"
+              >
+                Show "{title}" page here
+              </Button>
+              <br />
+
+              <Button
+                onClick={handleOpenLink}
+                variant="contained"
+                color="primary"
+              >
+                Open "{title}" in new tab
+              </Button>
+            </div>
+          )}
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleOpenLink} variant="secondary">
-            {title}
-            <ExternalLink style={{ marginLeft: 5 }} />
-          </Button>
+          {showIframe && (
+            <Button onClick={handleOpenLink} variant="secondary">
+              {title}
+              <ExternalLink style={{ marginLeft: 5 }} />
+            </Button>
+          )}
           <Button onClick={handleClose}>close</Button>
         </DialogActions>
       </BootstrapDialog>
