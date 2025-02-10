@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate, useLocation, matchPath } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
-import Typography from "@mui/material/Typography";
-import PageContainer from "../../atomic/organism/page-container/PageContainer";
-import Pods from "../pods/Pods";
+import Dialog from "@mui/material/Dialog";
+import Slide from "@mui/material/Slide";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import ContactDetails from "../contactDetails/ContactDetails";
+import Contacts from "../contacts/Contacts";
 import Pod from "../pod/Pod";
 import PodDetails from "../podDetails/PodDetails";
-import Contacts from "../contacts/Contacts";
-import ContactDetails from "../contactDetails/ContactDetails";
+import Pods from "../pods/Pods";
 import Profile from "../profile/Profile";
-import SplitPane from "react-split-pane";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemButton from "@mui/material/ListItemButton";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
-import Slide from "@mui/material/Slide";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -97,25 +83,29 @@ const FullScreenDialog = () => {
 
   return (
     <React.Fragment>
-      <Pods />
+      {!isContacts &&
+        !isContactDetails &&
+        !isPod &&
+        !isProfile &&
+        !isPodDetails && <Pods />}
       <Dialog fullScreen open={isContacts} TransitionComponent={Transition}>
-        <Contacts />
+        {!!isContacts && <Contacts />}
       </Dialog>
       <Dialog
         fullScreen
         open={isContactDetails}
         TransitionComponent={Transition}
       >
-        <ContactDetails />
+        {!!isContactDetails && <ContactDetails />}
       </Dialog>
       <Dialog fullScreen open={isPod} TransitionComponent={Transition}>
-        <Pod />
+        {!!isPod && <Pod />}
       </Dialog>
       <Dialog fullScreen open={isProfile} TransitionComponent={Transition}>
-        <Profile qr={pathname.includes("/profile/qr")} />
+        {!!isProfile && <Profile qr={pathname.includes("/profile/qr")} />}
       </Dialog>
       <Dialog fullScreen open={isPodDetails} TransitionComponent={Transition}>
-        <PodDetails />
+        {!!isPodDetails && <PodDetails />}
       </Dialog>
     </React.Fragment>
   );

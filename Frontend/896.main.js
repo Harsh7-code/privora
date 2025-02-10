@@ -2451,7 +2451,8 @@ function LoginPage() {
                       setContactsDispatch(contacts);
                       setEncryptionDispatch(encryption);
                       setUserProfileDispatch(userProfile);
-                    case 8:
+                      handleSubmit();
+                    case 9:
                     case "end":
                       return _context.stop();
                   }
@@ -11730,20 +11731,6 @@ function Layout_extends() { return Layout_extends = Object.assign ? Object.assig
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var Layout_Transition = /*#__PURE__*/index_js_default().forwardRef(function Transition(props, ref) {
   return /*#__PURE__*/index_js_default().createElement(Slide/* default */.A, Layout_extends({
     direction: "up",
@@ -11826,29 +11813,29 @@ var FullScreenDialog = function FullScreenDialog() {
   //   setOpen(false);
   // };
 
-  return /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Pods, null), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
+  return /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, !isContacts && !isContactDetails && !isPod && !isProfile && !isPodDetails && /*#__PURE__*/index_js_default().createElement(Pods, null), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
     fullScreen: true,
     open: isContacts,
     TransitionComponent: Layout_Transition
-  }, /*#__PURE__*/index_js_default().createElement(ContactsListPage, null)), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
+  }, !!isContacts && /*#__PURE__*/index_js_default().createElement(ContactsListPage, null)), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
     fullScreen: true,
     open: isContactDetails,
     TransitionComponent: Layout_Transition
-  }, /*#__PURE__*/index_js_default().createElement(ContactDetails_Profile, null)), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
+  }, !!isContactDetails && /*#__PURE__*/index_js_default().createElement(ContactDetails_Profile, null)), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
     fullScreen: true,
     open: isPod,
     TransitionComponent: Layout_Transition
-  }, /*#__PURE__*/index_js_default().createElement(Pod, null)), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
+  }, !!isPod && /*#__PURE__*/index_js_default().createElement(Pod, null)), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
     fullScreen: true,
     open: isProfile,
     TransitionComponent: Layout_Transition
-  }, /*#__PURE__*/index_js_default().createElement(Profile_Profile, {
+  }, !!isProfile && /*#__PURE__*/index_js_default().createElement(Profile_Profile, {
     qr: pathname.includes("/profile/qr")
   })), /*#__PURE__*/index_js_default().createElement(Dialog/* default */.A, {
     fullScreen: true,
     open: isPodDetails,
     TransitionComponent: Layout_Transition
-  }, /*#__PURE__*/index_js_default().createElement(Profile, null)));
+  }, !!isPodDetails && /*#__PURE__*/index_js_default().createElement(Profile, null)));
 };
 function useViewport() {
   // State to store the current viewport category ('mobile', 'tablet', 'desktop')
@@ -13969,7 +13956,7 @@ var Dropdown = /*#__PURE__*/index_js_.forwardRef(function (_ref, ref) {
   var handleForceClose = function handleForceClose() {
     onControlledOpen ? onControlledOpen(null) : setInternalOpen(null);
   };
-  var renderMenu = function renderMenu(menuItem, index) {
+  var _renderMenu = function renderMenu(menuItem, index) {
     if (!menuItem) return null;
     var _menuItem$props = menuItem.props,
       keepOpenLocal = _menuItem$props.keepOpen,
@@ -13992,7 +13979,7 @@ var Dropdown = /*#__PURE__*/index_js_.forwardRef(function (_ref, ref) {
           menuItem.props.onClick(event);
         }
       },
-      children: props.menu ? index_js_.Children.map(props.menu, renderMenu) : props.children
+      children: props.menu ? index_js_.Children.map(props.menu, _renderMenu) : props.children
     }));
   };
   return /*#__PURE__*/index_js_.createElement(index_js_.Fragment, null, /*#__PURE__*/index_js_.cloneElement(trigger, {
@@ -14024,7 +14011,7 @@ var Dropdown = /*#__PURE__*/index_js_.forwardRef(function (_ref, ref) {
     //       }
     //     : {}
     // }
-  }, index_js_.Children.map(menu, renderMenu)));
+  }, index_js_.Children.map(menu, _renderMenu)));
 });
 var DropdownMenuItem = (0,emotion_styled_browser_esm/* default */.A)(MenuItem/* default */.A)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between !important;\n\n  & > svg {\n    margin-left: 32px;\n  }\n"])));
 var DropdownNestedMenuItem = (0,emotion_styled_browser_esm/* default */.A)(dropdown_NestedMenuItem)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between !important;\n\n  & > svg {\n    margin-left: 32px;\n  }\n"])));
@@ -22191,7 +22178,7 @@ function PeerProvider(_ref) {
   var handleConnectionData = /*#__PURE__*/function () {
     var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(connection, managedState, rawData) {
       var _peerEncryptionKeys$f;
-      var state, _ref6, privateKey, remotePublicKey, established, symmetricKey, data, callback, _managedState$contact, request, response, next;
+      var state, _ref6, privateKey, remotePublicKey, established, symmetricKey, data, callback, _managedState$contact, request, response, _next2;
       return _regeneratorRuntime().wrap(function _callee5$(_context5) {
         while (1) switch (_context5.prev = _context5.next) {
           case 0:
@@ -22283,14 +22270,14 @@ function PeerProvider(_ref) {
                   return send;
                 }()
               };
-              next = function next(index) {
+              _next2 = function next(index) {
                 if (index < appiSchema[data.type](state).length) {
                   appiSchema[data.type](state)[index](request, response, function () {
-                    next(index + 1);
+                    _next2(index + 1);
                   });
                 }
               };
-              next(0);
+              _next2(0);
             }
           case 24:
           case "end":

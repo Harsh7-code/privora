@@ -643,6 +643,7 @@ export default function LoginPage() {
         setContactsDispatch(contacts);
         setEncryptionDispatch(encryption);
         setUserProfileDispatch(userProfile);
+        handleSubmit();
       });
     } catch (e) {
       console.error(e);
