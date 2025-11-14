@@ -620,9 +620,9 @@ export default function AppHeader(
 
   const AppBarRender = () => (
     <AppBar>
-      {/* <Toolbar
+      <Toolbar
         style={{
-          backgroundColor: "#d32f2f",
+          backgroundColor: "#41a4f5",
           color: "white",
           display: "flex",
           justifyContent: "center",
@@ -632,9 +632,9 @@ export default function AppHeader(
         }}
       >
         <Typography component="div">
-          For testing purposes only
+          For testing and demo purposes. See <a style={{color: 'white'}} href="https://p2p.positive-intentions.com/iframe.html?globals=&id=demo-p2p-messaging--p-2-p-messaging&viewMode=story" >latest version.</a>
         </Typography>
-      </Toolbar> */}
+      </Toolbar>
       <Toolbar>
         {backButton && (
           <IconButton

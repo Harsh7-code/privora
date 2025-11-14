@@ -387,7 +387,14 @@ export default function LoginPage() {
     compiledProfile.settings?.browserNotification;
   const storedExperimentalFeatures =
     compiledProfile.settings?.experimentalFeatures;
-  const [defaultOpen, setDefaultOpen] = useState(true);
+  const [defaultOpen, setDefaultOpen] = useState(false);
+
+  // useEffect(() => {
+  //   console.log({ storedUsername });
+  //   return () => {
+  //     console.log("unmounting login page");
+  //   }
+  // }, [storedUsername]);
 
   const [peerjsServer, setPeerjsServer] = useState("");
   const handlePeerjsServerChange = (event) => {
