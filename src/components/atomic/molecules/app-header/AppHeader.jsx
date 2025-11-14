@@ -631,7 +631,7 @@ export default function AppHeader(
           minHeight: "20px",
         }}
       >
-        <Typography component="div">
+        <Typography component="div" sx={{ flexGrow: 1, fontSize: '12px', textAlign: 'center' }}>
           For testing and demo purposes. See <a style={{color: 'white'}} href="https://p2p.positive-intentions.com/iframe.html?globals=&id=demo-p2p-messaging--p-2-p-messaging&viewMode=story" >latest version.</a>
         </Typography>
       </Toolbar>

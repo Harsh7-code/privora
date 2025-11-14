@@ -318,7 +318,7 @@ const ConnectToPeer = ({ qr, open, link, collapse }) => {
             </Button>
           </AccordionDetails>
         </Accordion>
-        {!false && (
+        {false && (
           <Accordion
             expanded={expanded.includes("panel5")}
             onChange={handleChange("panel5")}

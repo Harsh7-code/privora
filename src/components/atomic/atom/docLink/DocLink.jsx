@@ -45,7 +45,7 @@ export default ({
   title = "Getting started",
 }) => {
   const [open, setOpen] = useState(defaultOpen);
-  const [showIframe, setShowIframe] = useState(false);
+  const [showIframe, setShowIframe] = useState(true);
   const handleClose = () => {
     setOpen(false);
     onClose && onClose();

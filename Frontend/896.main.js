@@ -92,7 +92,7 @@ var AccordionSummary = __webpack_require__(48719);
 // EXTERNAL MODULE: ./node_modules/@mui/material/Avatar/Avatar.js + 2 modules
 var Avatar = __webpack_require__(81385);
 // EXTERNAL MODULE: ./node_modules/@mui/material/Button/Button.js + 3 modules
-var Button = __webpack_require__(86990);
+var Button_Button = __webpack_require__(86990);
 // EXTERNAL MODULE: ./node_modules/@mui/material/Checkbox/Checkbox.js + 4 modules
 var Checkbox = __webpack_require__(27558);
 // EXTERNAL MODULE: ./node_modules/@mui/material/FormControl/FormControl.js + 1 modules
@@ -583,7 +583,7 @@ var Transition = /*#__PURE__*/index_js_default().forwardRef(function Transition(
     _useState2 = DocLink_slicedToArray(_useState, 2),
     open = _useState2[0],
     setOpen = _useState2[1];
-  var _useState3 = (0,index_js_.useState)(false),
+  var _useState3 = (0,index_js_.useState)(true),
     _useState4 = DocLink_slicedToArray(_useState3, 2),
     showIframe = _useState4[0],
     setShowIframe = _useState4[1];
@@ -647,24 +647,24 @@ var Transition = /*#__PURE__*/index_js_default().forwardRef(function Transition(
       flexDirection: "column",
       alignItems: "center"
     }
-  }, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: function onClick() {
       return setShowIframe(true);
     },
     variant: "contained",
     color: "primary"
-  }, "Show \"", title, "\" page here"), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "Show \"", title, "\" page here"), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: handleOpenLink,
     variant: "contained",
     color: "primary"
-  }, "Open \"", title, "\" in new tab"))), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, showIframe && /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "Open \"", title, "\" in new tab"))), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, showIframe && /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: handleOpenLink,
     variant: "secondary"
   }, title, /*#__PURE__*/index_js_default().createElement(Launch/* default */.A, {
     style: {
       marginLeft: 5
     }
-  })), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  })), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: handleClose
   }, "close"))));
 });
@@ -736,7 +736,7 @@ var QRInput_useStyles = (0,makeStyles/* default */.A)(function (theme) {
     }
   };
 });
-/* harmony default export */ const QRInput = (function (_ref) {
+/* harmony default export */ const qrInput_QRInput = (function (_ref) {
   var controlledValue = _ref.value,
     defaultValue = _ref.defaultValue,
     qr = _ref.qr,
@@ -908,7 +908,7 @@ var QRInput_useStyles = (0,makeStyles/* default */.A)(function (theme) {
         facingMode: "environment"
       }
     }
-  }), !qr && !scan && /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), !qr && !scan && /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -917,7 +917,7 @@ var QRInput_useStyles = (0,makeStyles/* default */.A)(function (theme) {
       setScanning(!scanning);
     },
     color: scanning ? "error" : "primary"
-  }, scanning ? "Stop Scanning" : "Scan QR"), !!back && /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, scanning ? "Stop Scanning" : "Scan QR"), !!back && /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -971,7 +971,7 @@ var QRInput_useStyles = (0,makeStyles/* default */.A)(function (theme) {
     }
   }, /*#__PURE__*/index_js_default().createElement(SkipNext/* default */.A, {
     fontSize: "inherit"
-  })), !!next && /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  })), !!next && /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -982,7 +982,7 @@ var QRInput_useStyles = (0,makeStyles/* default */.A)(function (theme) {
   }, "next stage")))));
 });
 // EXTERNAL MODULE: ./src/components/p2p/usePeer.js
-var usePeer = __webpack_require__(76538);
+var p2p_usePeer = __webpack_require__(76538);
 ;// CONCATENATED MODULE: ./src/components/atomic/molecules/webrtc-wizard/WebRTCWizard.jsx
 function WebRTCWizard_typeof(o) { "@babel/helpers - typeof"; return WebRTCWizard_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, WebRTCWizard_typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == WebRTCWizard_typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(WebRTCWizard_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
@@ -1009,7 +1009,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
 /* harmony default export */ const WebRTCWizard = (function (_ref) {
   var onConnect = _ref.onConnect,
     onReceive = _ref.onReceive;
-  var _useCryptography = (0,Cryptography.useCryptography)(),
+  var _useCryptography = useCryptography(),
     generateKeyPair = _useCryptography.generateKeyPair,
     deserializePublicKey = _useCryptography.deserializePublicKey,
     encrypt = _useCryptography.encrypt,
@@ -1018,69 +1018,69 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     deserializeSymmetricKey = _useCryptography.deserializeSymmetricKey,
     encryptWithSymmetricKey = _useCryptography.encryptWithSymmetricKey,
     decryptWithSymmetricKey = _useCryptography.decryptWithSymmetricKey;
-  var _useState = (0,index_js_.useState)(""),
+  var _useState = useState(""),
     _useState2 = WebRTCWizard_slicedToArray(_useState, 2),
     mode = _useState2[0],
     setMode = _useState2[1];
-  var _usePeer = (0,usePeer/* default */.A)(),
+  var _usePeer = usePeer(),
     peer = _usePeer.peer;
-  var _useState3 = (0,index_js_.useState)(null),
+  var _useState3 = useState(null),
     _useState4 = WebRTCWizard_slicedToArray(_useState3, 2),
     rtc = _useState4[0],
     setRtc = _useState4[1];
-  var _useState5 = (0,index_js_.useState)(null),
+  var _useState5 = useState(null),
     _useState6 = WebRTCWizard_slicedToArray(_useState5, 2),
     dc = _useState6[0],
     setDc = _useState6[1];
-  var _useState7 = (0,index_js_.useState)(null),
+  var _useState7 = useState(null),
     _useState8 = WebRTCWizard_slicedToArray(_useState7, 2),
     rtcIceCandidate = _useState8[0],
     setRtcIceCandidate = _useState8[1];
-  var _useState9 = (0,index_js_.useState)(null),
+  var _useState9 = useState(null),
     _useState10 = WebRTCWizard_slicedToArray(_useState9, 2),
     rtcRemoteIceCandidate = _useState10[0],
     setRtcRemoteIceCandidate = _useState10[1];
-  var _useState11 = (0,index_js_.useState)(null),
+  var _useState11 = useState(null),
     _useState12 = WebRTCWizard_slicedToArray(_useState11, 2),
     rtcOffer = _useState12[0],
     setRtcOffer = _useState12[1];
-  var _useState13 = (0,index_js_.useState)(null),
+  var _useState13 = useState(null),
     _useState14 = WebRTCWizard_slicedToArray(_useState13, 2),
     rtcRemoteOffer = _useState14[0],
     setRtcRemoteOffer = _useState14[1];
-  var _useState15 = (0,index_js_.useState)(null),
+  var _useState15 = useState(null),
     _useState16 = WebRTCWizard_slicedToArray(_useState15, 2),
     rtcAnswer = _useState16[0],
     setRtcAnswer = _useState16[1];
-  var _useState17 = (0,index_js_.useState)(null),
+  var _useState17 = useState(null),
     _useState18 = WebRTCWizard_slicedToArray(_useState17, 2),
     rtcRemoteAnswer = _useState18[0],
     setRtcRemoteAnswer = _useState18[1];
-  var _useState19 = (0,index_js_.useState)(null),
+  var _useState19 = useState(null),
     _useState20 = WebRTCWizard_slicedToArray(_useState19, 2),
     publicKey = _useState20[0],
     setPublicKey = _useState20[1];
-  var _useState21 = (0,index_js_.useState)(null),
+  var _useState21 = useState(null),
     _useState22 = WebRTCWizard_slicedToArray(_useState21, 2),
     serializedPublicKey = _useState22[0],
     setSerializedPublicKey = _useState22[1];
-  var _useState23 = (0,index_js_.useState)(null),
+  var _useState23 = useState(null),
     _useState24 = WebRTCWizard_slicedToArray(_useState23, 2),
     privateKey = _useState24[0],
     setPrivateKey = _useState24[1];
-  var _useState25 = (0,index_js_.useState)(null),
+  var _useState25 = useState(null),
     _useState26 = WebRTCWizard_slicedToArray(_useState25, 2),
     remotePublicKey = _useState26[0],
     setRemotePublicKey = _useState26[1];
-  var _useState27 = (0,index_js_.useState)(null),
+  var _useState27 = useState(null),
     _useState28 = WebRTCWizard_slicedToArray(_useState27, 2),
     symmetricKey = _useState28[0],
     setSymmetricKey = _useState28[1];
-  var _useState29 = (0,index_js_.useState)(null),
+  var _useState29 = useState(null),
     _useState30 = WebRTCWizard_slicedToArray(_useState29, 2),
     contactDetails = _useState30[0],
     setContactDetails = _useState30[1];
-  (0,index_js_.useEffect)(function () {
+  useEffect(function () {
     var generateKeys = /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
         var keyPair, serializedPublicKey;
@@ -1110,12 +1110,12 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     }();
     generateKeys();
   }, []);
-  (0,index_js_.useEffect)(function () {
+  useEffect(function () {
     if (peer) {
       setRtc(peer.connect().peerConnection);
     }
   }, [peer]);
-  (0,index_js_.useEffect)(function () {
+  useEffect(function () {
     if (rtc) {
       rtc.onicecandidate = function (event) {
         if (event.candidate) {
@@ -1227,7 +1227,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
       return _ref4.apply(this, arguments);
     };
   }();
-  (0,index_js_.useEffect)(function () {
+  useEffect(function () {
     if (rtcRemoteOffer) {
       handleRemoteOffer(rtcRemoteOffer);
     }
@@ -1276,7 +1276,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
       return _ref6.apply(this, arguments);
     };
   }();
-  (0,index_js_.useEffect)(function () {
+  useEffect(function () {
     if (rtcRemoteAnswer) {
       handleRemoteAnswer(rtcRemoteAnswer);
     }
@@ -1300,7 +1300,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
       return _ref7.apply(this, arguments);
     };
   }();
-  (0,index_js_.useEffect)(function () {
+  useEffect(function () {
     if (rtcRemoteIceCandidate) {
       handleIceCandidate(rtcRemoteIceCandidate);
     }
@@ -1311,7 +1311,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     remotePublicKey: remotePublicKey,
     symmetricKey: symmetricKey
   });
-  return /*#__PURE__*/index_js_default().createElement("div", null, !mode && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  return /*#__PURE__*/React.createElement("div", null, !mode && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Button, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -1319,14 +1319,14 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
       setMode("createOffer");
       handleCreateOffer();
     }
-  }, "create offer"), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "create offer"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Button, {
     type: "button",
     fullWidth: true,
     variant: "contained",
     onClick: function onClick() {
       return setMode("scanOffer");
     }
-  }, "scan offer")), mode === "createOffer" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }, "scan offer")), mode === "createOffer" && /*#__PURE__*/React.createElement(QRInput, {
     value: JSON.stringify({
       rtcOffer: rtcOffer,
       rtcIceCandidate: rtcIceCandidate
@@ -1338,7 +1338,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     next: function next() {
       return setMode("scanAnswer");
     }
-  }), mode === "scanOffer" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }), mode === "scanOffer" && /*#__PURE__*/React.createElement(QRInput, {
     scan: true,
     onScan: function onScan(data) {
       var _JSON$parse = JSON.parse(data),
@@ -1351,7 +1351,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     back: function back() {
       return setMode("");
     }
-  }), mode === "scanAnswer" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }), mode === "scanAnswer" && /*#__PURE__*/React.createElement(QRInput, {
     scan: true,
     onScan: function onScan(data) {
       var _JSON$parse2 = JSON.parse(data),
@@ -1364,7 +1364,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     back: function back() {
       return setMode("createOffer");
     }
-  }), mode === "createAnswer" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }), mode === "createAnswer" && /*#__PURE__*/React.createElement(QRInput, {
     value: JSON.stringify({
       rtcAnswer: rtcAnswer,
       rtcIceCandidate: rtcIceCandidate
@@ -1376,7 +1376,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     next: function next() {
       return setMode("scanPublicKey");
     }
-  }), mode === "sharePublicKey" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }), mode === "sharePublicKey" && /*#__PURE__*/React.createElement(QRInput, {
     value: serializedPublicKey,
     qr: true,
     back: function back() {
@@ -1385,7 +1385,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     next: function next() {
       return setMode("scanRemotePublicKey");
     }
-  }), mode === "scanPublicKey" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }), mode === "scanPublicKey" && /*#__PURE__*/React.createElement(QRInput, {
     scan: true,
     onScan: function onScan(data) {
       setRemotePublicKey(data);
@@ -1394,7 +1394,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     back: function back() {
       return setMode("createAnswer");
     }
-  }), mode === "scanRemotePublicKeyAndSymmetricKey" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }), mode === "scanRemotePublicKeyAndSymmetricKey" && /*#__PURE__*/React.createElement(QRInput, {
     scan: true,
     onScan: function onScan(data) {
       var _JSON$parse3 = JSON.parse(data),
@@ -1407,7 +1407,7 @@ function WebRTCWizard_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
     back: function back() {
       return setMode("scanPublicKey");
     }
-  }), mode === "sharePublicKeyAndSymmetricKey" && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }), mode === "sharePublicKeyAndSymmetricKey" && /*#__PURE__*/React.createElement(QRInput, {
     value: JSON.stringify({
       publicKey: publicKey,
       symmetricKey: symmetricKey
@@ -1693,7 +1693,7 @@ var ConnectToPeer = function ConnectToPeer(_ref) {
         facingMode: "environment"
       }
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -1701,18 +1701,7 @@ var ConnectToPeer = function ConnectToPeer(_ref) {
       return setScanning(!scanning);
     },
     color: scanning ? "error" : "primary"
-  }, scanning ? t("components.connectToPeer.stopScanning") : t("components.connectToPeer.scanQr")))),  true && /*#__PURE__*/index_js_default().createElement(Accordion/* default */.A, {
-    expanded: expanded.includes("panel5"),
-    onChange: handleChange("panel5")
-  }, /*#__PURE__*/index_js_default().createElement(AccordionSummary/* default */.A, {
-    expandIcon: qr ? undefined : /*#__PURE__*/index_js_default().createElement(ExpandMore/* default */.A, null),
-    "aria-controls": "panel4bh-content",
-    id: "panel4bh-header"
-  }, /*#__PURE__*/index_js_default().createElement(Typography_Typography/* default */.A, {
-    sx: {
-      flexShrink: 0
-    }
-  }, t("components.connectToPeer.shareWebRtcQr"))), /*#__PURE__*/index_js_default().createElement(AccordionDetails/* default */.A, null, expanded.includes("panel5") && /*#__PURE__*/index_js_default().createElement(WebRTCWizard, null)))));
+  }, scanning ? t("components.connectToPeer.stopScanning") : t("components.connectToPeer.scanQr")))),  false && /*#__PURE__*/0));
 };
 /* harmony default export */ const connect_to_peer_ConnectToPeer = (ConnectToPeer);
 // EXTERNAL MODULE: ./node_modules/react-multi-carousel/index.js
@@ -2015,7 +2004,7 @@ var SimpleSlider = function SimpleSlider(_ref) {
   }, /*#__PURE__*/index_js_default().createElement(lib/* default */.A, settings, avatars.map(function (avatar, index) {
     return /*#__PURE__*/index_js_default().createElement("div", {
       key: index
-    }, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+    }, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
       onClick: function onClick() {
         return onSelect(avatar.src);
       }
@@ -2545,14 +2534,14 @@ function LoginPage() {
     _useState24 = Login_slicedToArray(_useState23, 2),
     activatedNumber = _useState24[0],
     setActivateNumber = _useState24[1];
-  var NextButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var NextButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
       return setActivateNumber(activatedNumber + 1);
     }
   }, "Next");
-  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
@@ -2834,7 +2823,7 @@ function LoginPage() {
       minWidth: "300px",
       margin: "auto"
     }
-  }), /*#__PURE__*/index_js_default().createElement("br", null)), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement("br", null)), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -2967,7 +2956,7 @@ function LoginPage() {
     style: {
       color: "red"
     }
-  }, "*"), t("loginPage.termsAgreement"))), /*#__PURE__*/index_js_default().createElement(AccordionDetails/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Typography_Typography/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "*"), t("loginPage.termsAgreement"))), /*#__PURE__*/index_js_default().createElement(AccordionDetails/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Typography_Typography/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -2975,7 +2964,7 @@ function LoginPage() {
     onClick: function onClick() {
       return navigate("/terms");
     }
-  }, t("loginPage.goToTermsAndConditions"))), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Typography_Typography/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, t("loginPage.goToTermsAndConditions"))), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Typography_Typography/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -2983,7 +2972,7 @@ function LoginPage() {
     onClick: function onClick() {
       return navigate("/terms/privacy");
     }
-  }, t("loginPage.goToPrivacyPolicy"))))), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, t("loginPage.goToPrivacyPolicy"))))), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     ref: ref5,
     type: "button",
     fullWidth: true,
@@ -2991,7 +2980,7 @@ function LoginPage() {
     color: "success",
     disabled: isSubmitDisabled,
     onClick: handleSubmit
-  }, t("loginPage.connect")), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, t("loginPage.connect")), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     ref: ref6,
     type: "button",
     fullWidth: true,
@@ -3461,7 +3450,7 @@ function GroupsListPage() {
     userProfile = _useBlockchain.compiledBlockchain;
   var storedPersonalId = userProfile.connectionId;
   // const storedPersonalId = useSelector((state) => state.userProfile.id);
-  var _usePeer = (0,usePeer/* default */.A)(),
+  var _usePeer = (0,p2p_usePeer/* default */.A)(),
     activeConnections = _usePeer.activeConnections;
   var _useBlockchain2 = (0,Blockchain/* useBlockchain */.o)({
       compiler: podChain/* compiler */.cx,
@@ -3649,14 +3638,14 @@ function Pods() {
     _useState2 = Pods_slicedToArray(_useState, 2),
     activatedNumber = _useState2[0],
     setActivateNumber = _useState2[1];
-  var NextButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var NextButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
       return setActivateNumber(activatedNumber + 1);
     }
   }, "Next");
-  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
@@ -3944,12 +3933,12 @@ var VoiceRecorderButton = function VoiceRecorderButton(_ref) {
     style: {
       width: "100%"
     }
-  })), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  })), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: recording ? "error" : "primary",
     onClick: recording ? stopRecording : startRecording,
     fullWidth: true
-  }, recording ? "Stop Recording" : "New Recording"), audioUrl && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, recording ? "Stop Recording" : "New Recording"), audioUrl && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "success",
     onClick: function onClick() {
@@ -4874,7 +4863,7 @@ function Pod() {
     }),
     podBlockchain = _useBlockchain2.compiledBlockchain,
     addBlocksToPod = _useBlockchain2.addBlocks;
-  var _usePeer = (0,usePeer/* default */.A)((podBlockchain === null || podBlockchain === void 0 ? void 0 : podBlockchain.users) || []),
+  var _usePeer = (0,p2p_usePeer/* default */.A)((podBlockchain === null || podBlockchain === void 0 ? void 0 : podBlockchain.users) || []),
     sendMessage = _usePeer.sendMessage,
     makeCall = _usePeer.makeCall,
     endCall = _usePeer.endCall,
@@ -5574,7 +5563,7 @@ function Pod() {
     ,
     timestamp: (0,Conversation/* formatDate */.Y)((_replyMessage$timesta = replyMessage.timestamp) === null || _replyMessage$timesta === void 0 ? void 0 : _replyMessage$timesta.created),
     avatar: replyMessage.avatar
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: function onClick() {
       return setReplyMessage(null);
     }
@@ -5747,7 +5736,7 @@ function Pod() {
         top: 90,
         left: 10
       }
-    }), !localStream && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+    }), !localStream && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
       type: "button",
       sx: {
         mb: 2
@@ -5758,7 +5747,7 @@ function Pod() {
       onClick: function onClick() {
         return handleAnswerCall(call);
       }
-    }, "answer call"), /*#__PURE__*/index_js_default().createElement("br", null)), !isCasting && localStream && stream && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+    }, "answer call"), /*#__PURE__*/index_js_default().createElement("br", null)), !isCasting && localStream && stream && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
       type: "button",
       sx: {
         mb: 2
@@ -5769,14 +5758,14 @@ function Pod() {
       onClick: function onClick() {
         return navigate("/pod/".concat(podId, "/verse"));
       }
-    }, "go to verse"), /*#__PURE__*/index_js_default().createElement("br", null)), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+    }, "go to verse"), /*#__PURE__*/index_js_default().createElement("br", null)), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
       type: "button",
       variant: "contained",
       fullWidth: true,
       color: "error",
       onClick: handleEndCall
     }, "hang up"));
-  })), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  })), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     autoFocus: true,
     onClick: handleClose
   }, "close")))));
@@ -5918,7 +5907,7 @@ function Profile() {
     }),
     compiledPodBlockchain = _useBlockchain2.compiledBlockchain,
     addPodBlocks = _useBlockchain2.addBlocks;
-  var _usePeer = (0,usePeer/* default */.A)((podDetails === null || podDetails === void 0 ? void 0 : podDetails.members) || []),
+  var _usePeer = (0,p2p_usePeer/* default */.A)((podDetails === null || podDetails === void 0 ? void 0 : podDetails.members) || []),
     sendMessage = _usePeer.sendMessage,
     connectToPeer = _usePeer.connectToPeer,
     activeConnections = _usePeer.activeConnections;
@@ -6308,7 +6297,7 @@ function ContactsListPage(_ref) {
   var storedPods = (0,react_redux/* useSelector */.d4)(function (state) {
     return state.pods;
   });
-  var _usePeer = (0,usePeer/* default */.A)([]),
+  var _usePeer = (0,p2p_usePeer/* default */.A)([]),
     activeConnections = _usePeer.activeConnections;
   var _useState = (0,index_js_.useState)(false),
     _useState2 = Contacts_slicedToArray(_useState, 2),
@@ -6379,14 +6368,14 @@ function ContactsListPage(_ref) {
     _useState6 = Contacts_slicedToArray(_useState5, 2),
     activatedNumber = _useState6[0],
     setActivateNumber = _useState6[1];
-  var NextButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var NextButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
       return setActivateNumber(activatedNumber + 1);
     }
   }, "Next");
-  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
@@ -6728,7 +6717,7 @@ function ContactDetails_Profile() {
   var contact = contacts.find(function (contact) {
     return contact.connectionId === contactId;
   });
-  var _usePeer = (0,usePeer/* default */.A)([contactId]),
+  var _usePeer = (0,p2p_usePeer/* default */.A)([contactId]),
     connectToPeer = _usePeer.connectToPeer,
     sendMessage = _usePeer.sendMessage,
     activeConnections = _usePeer.activeConnections;
@@ -6980,14 +6969,14 @@ function ContactDetails_Profile() {
     _useState10 = ContactDetails_slicedToArray(_useState9, 2),
     activatedNumber = _useState10[0],
     setActivateNumber = _useState10[1];
-  var NextButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var NextButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
       return setActivateNumber(activatedNumber + 1);
     }
   }, "Next");
-  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  var PrevButton = /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
@@ -7124,7 +7113,7 @@ function ContactDetails_Profile() {
         edge: "end"
       }, /*#__PURE__*/index_js_default().createElement(Refresh/* default */.A, null)))
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     className: classes.button,
     fullWidth: true,
@@ -7149,7 +7138,7 @@ function ContactDetails_Profile() {
     sx: {
       flexShrink: 0
     }
-  }, t("common.more"))), /*#__PURE__*/index_js_default().createElement(AccordionDetails/* default */.A, null, !anyPodWithPeer && /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, t("common.more"))), /*#__PURE__*/index_js_default().createElement(AccordionDetails/* default */.A, null, !anyPodWithPeer && /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -7505,7 +7494,7 @@ function Profile_Profile(_ref) {
   }), /*#__PURE__*/index_js_default().createElement("form", {
     noValidate: true,
     className: classes.form
-  }, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -7590,7 +7579,7 @@ function Profile_Profile(_ref) {
     heading: t("components.cryptoSignature"),
     defaultValue: storedEncryptionSignature,
     onChange: addEncryptionSignatureBlock
-  }), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement("br", null), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -7704,7 +7693,7 @@ function Files_ContactsListPage() {
   var storedPods = (0,react_redux/* useSelector */.d4)(function (state) {
     return state.pods;
   });
-  var _usePeer = (0,usePeer/* default */.A)([]),
+  var _usePeer = (0,p2p_usePeer/* default */.A)([]),
     activeConnections = _usePeer.activeConnections;
   var _useState = (0,index_js_.useState)(false),
     _useState2 = Files_slicedToArray(_useState, 2),
@@ -7879,7 +7868,7 @@ function File() {
     userProfile = _useBlockchain.compiledBlockchain;
   var storedConnectionId = userProfile.connectionId;
   // const storedConnectionId = useSelector((state) => state.userProfile.id);
-  var _usePeer = (0,usePeer/* default */.A)((podDetails === null || podDetails === void 0 ? void 0 : podDetails.members) || []),
+  var _usePeer = (0,p2p_usePeer/* default */.A)((podDetails === null || podDetails === void 0 ? void 0 : podDetails.members) || []),
     sendMessage = _usePeer.sendMessage,
     connectToPeer = _usePeer.connectToPeer,
     activeConnections = _usePeer.activeConnections;
@@ -8064,7 +8053,7 @@ function File() {
     InputProps: {
       readOnly: true
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -8075,7 +8064,7 @@ function File() {
       removeFileFromPodDispatch();
       // updateUsernameDispatch("");
     }
-  }, "Delete file"))), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "Delete file"))), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -8459,7 +8448,7 @@ function Feed() {
     }),
     podBlockchain = _useBlockchain2.compiledBlockchain,
     addBlocksToPod = _useBlockchain2.addBlocks;
-  var _usePeer = (0,usePeer/* default */.A)((podBlockchain === null || podBlockchain === void 0 ? void 0 : podBlockchain.users) || []),
+  var _usePeer = (0,p2p_usePeer/* default */.A)((podBlockchain === null || podBlockchain === void 0 ? void 0 : podBlockchain.users) || []),
     sendMessage = _usePeer.sendMessage,
     makeCall = _usePeer.makeCall,
     endCall = _usePeer.endCall,
@@ -8997,7 +8986,7 @@ function Feed() {
         top: 90,
         left: 10
       }
-    }), !localStream && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+    }), !localStream && /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
       type: "button",
       sx: {
         mb: 2
@@ -9008,7 +8997,7 @@ function Feed() {
       onClick: function onClick() {
         return handleAnswerCall(call);
       }
-    }, "answer call"), /*#__PURE__*/index_js_default().createElement("br", null)), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+    }, "answer call"), /*#__PURE__*/index_js_default().createElement("br", null)), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
       type: "button",
       variant: "contained",
       fullWidth: true,
@@ -9054,7 +9043,7 @@ function Feed() {
     ,
     timestamp: (0,Thread/* formatDate */.Y)((_replyMessage$timesta = replyMessage.timestamp) === null || _replyMessage$timesta === void 0 ? void 0 : _replyMessage$timesta.created),
     avatar: replyMessage.avatar
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: function onClick() {
       return setReplyMessage(null);
     }
@@ -9324,7 +9313,7 @@ var QRText = function QRText() {
         facingMode: "environment"
       }
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -9521,7 +9510,7 @@ var QRFile = function QRFile() {
       }
     }, 1000);
   }, [isPlaying, selectedPart]);
-  return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     id: "load-file-button",
     variant: "contained",
     component: "label",
@@ -9557,7 +9546,7 @@ var QRFile = function QRFile() {
         facingMode: "environment"
       }
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     type: "button",
     fullWidth: true,
     variant: "contained",
@@ -9801,7 +9790,7 @@ var RSA_QRText = function QRText() {
   var handleError = function handleError(err) {
     console.error(err);
   };
-  return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: console.log,
@@ -10002,7 +9991,7 @@ var Symmetric_QRText = function QRText() {
   var handleError = function handleError(err) {
     console.error(err);
   };
-  return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: console.log,
@@ -10061,7 +10050,7 @@ var Symmetric_QRText = function QRText() {
         edge: "end"
       }, /*#__PURE__*/index_js_default().createElement(Download/* default */.A, null))))
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: console.log,
@@ -10093,7 +10082,7 @@ var Symmetric_QRText = function QRText() {
         edge: "end"
       }, /*#__PURE__*/index_js_default().createElement(Download/* default */.A, null))))
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     color: "primary",
     onClick: console.log,
@@ -10628,7 +10617,7 @@ function TermsAndConditions_ContactsListPage() {
   var storedPods = (0,react_redux/* useSelector */.d4)(function (state) {
     return state.pods;
   });
-  var _usePeer = (0,usePeer/* default */.A)([]),
+  var _usePeer = (0,p2p_usePeer/* default */.A)([]),
     activeConnections = _usePeer.activeConnections;
   var _useState = (0,index_js_.useState)(false),
     _useState2 = TermsAndConditions_slicedToArray(_useState, 2),
@@ -10823,7 +10812,7 @@ function PrivacyPolicy_ContactsListPage() {
   var storedPods = (0,react_redux/* useSelector */.d4)(function (state) {
     return state.pods;
   });
-  var _usePeer = (0,usePeer/* default */.A)([]),
+  var _usePeer = (0,p2p_usePeer/* default */.A)([]),
     activeConnections = _usePeer.activeConnections;
   var _useState = (0,index_js_.useState)(false),
     _useState2 = PrivacyPolicy_slicedToArray(_useState, 2),
@@ -11038,7 +11027,7 @@ function Map() {
   var storedPods = (0,react_redux/* useSelector */.d4)(function (state) {
     return state.pods;
   });
-  var _usePeer = (0,usePeer/* default */.A)([]),
+  var _usePeer = (0,p2p_usePeer/* default */.A)([]),
     activeConnections = _usePeer.activeConnections;
   var _useState = (0,index_js_.useState)(false),
     _useState2 = Map_slicedToArray(_useState, 2),
@@ -11335,7 +11324,7 @@ function WebRTC_Maintainance() {
   var contacts = (0,react_redux/* useSelector */.d4)(function (state) {
     return state.contacts;
   }) || [];
-  var _usePeer = (0,usePeer/* default */.A)(),
+  var _usePeer = (0,p2p_usePeer/* default */.A)(),
     peer = _usePeer.peer;
   var _useState = (0,index_js_.useState)(null),
     _useState2 = WebRTC_slicedToArray(_useState, 2),
@@ -11710,14 +11699,14 @@ function WebRTC_Maintainance() {
         edge: "end"
       }, /*#__PURE__*/index_js_default().createElement(Refresh/* default */.A, null)))
     }
-  }), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     variant: "contained",
     component: "label",
     fullWidth: true,
     onClick: function onClick() {
       dc.send(message);
     }
-  }, "send"),  true && /*#__PURE__*/index_js_default().createElement(QRInput, {
+  }, "send"),  true && /*#__PURE__*/index_js_default().createElement(qrInput_QRInput, {
     defaultValue: "hello world"
   })));
 }
@@ -12023,11 +12012,11 @@ function Meshtastic_Maintainance() {
     dividers: true
   }, /*#__PURE__*/index_js_default().createElement(Typography_Typography/* default */.A, {
     variant: "p"
-  }, "Meshtastic\xAE is a registered trademark of Meshtastic LLC. Meshtastic software components are released under various licenses, see GitHub for details. No warranty is provided - use at your own risk."), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "Meshtastic\xAE is a registered trademark of Meshtastic LLC. Meshtastic software components are released under various licenses, see GitHub for details. No warranty is provided - use at your own risk."), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: function onClick() {
       return window.open("https://github.com/meshtastic/web", "_blank");
     }
-  }, "Meshtastic web github")), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "Meshtastic web github")), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     autoFocus: true,
     onClick: handleClose
   }, "close"))));
@@ -12160,11 +12149,11 @@ function Computer_Maintainance() {
     dividers: true
   }, /*#__PURE__*/index_js_default().createElement(Typography_Typography/* default */.A, {
     variant: "p"
-  }, "Desktop environment in the browser"), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "Desktop environment in the browser"), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     onClick: function onClick() {
       return window.open("https://github.com/DustinBrett/daedalOS", "_blank");
     }
-  }, "daedalOS github")), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+  }, "daedalOS github")), /*#__PURE__*/index_js_default().createElement(DialogActions/* default */.A, null, /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
     autoFocus: true,
     onClick: handleClose
   }, "close"))));
@@ -13508,7 +13497,7 @@ function ErrorBoundary(props) {
   try {
     if (hasError) {
       // You can customize the error message and UI here
-      return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement("h1", null, "Something went wrong!"), /*#__PURE__*/index_js_default().createElement("p", null, error.toString()), /*#__PURE__*/index_js_default().createElement(Button/* default */.A, {
+      return /*#__PURE__*/index_js_default().createElement("div", null, /*#__PURE__*/index_js_default().createElement("h1", null, "Something went wrong!"), /*#__PURE__*/index_js_default().createElement("p", null, error.toString()), /*#__PURE__*/index_js_default().createElement(Button_Button/* default */.A, {
         type: "button",
         fullWidth: true,
         variant: "contained",
@@ -18350,7 +18339,12 @@ function AppHeader(_ref4) {
         minHeight: "20px"
       }
     }, /*#__PURE__*/index_js_default().createElement(Typography/* default */.A, {
-      component: "div"
+      component: "div",
+      sx: {
+        flexGrow: 1,
+        fontSize: '12px',
+        textAlign: 'center'
+      }
     }, "For testing and demo purposes. See ", /*#__PURE__*/index_js_default().createElement("a", {
       style: {
         color: 'white'
