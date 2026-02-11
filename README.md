@@ -4,7 +4,7 @@
 
 <div align="center">
   
-[Live App](https://chat.positive-intentions.com) | [Docs](https://positive-intentions.com) | [Reddit](https://www.reddit.com/r/positive_intentions) | <a rel="me" href="https://infosec.exchange/@xoron">Mastodon</a> | [Discord](https://discord.gg/unnQnR67nR)
+[Live App](https://chat.positive-intentions.com) | [Docs](https://positive-intentions.com) | [Reddit](https://www.reddit.com/r/positive_intentions) | <a rel="me" href="https://infosec.exchange/@xoron">Mastodon</a>
 </div>
 
 <div align="center">
@@ -144,3 +144,4 @@ Pushing the boundaries of what's possible with current web technologies to creat
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=positive-intentions/chat&type=Timeline" />
  </picture>
 </a>
+
